@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="profile-container">
+    <h1>User Profile</h1>
+    <div id="profileDetails">
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Phone Number:</strong> <span id="phoneNumber"></span></p>
+<!--        <p><strong>Created At:</strong> <span id="createdAt"></span></p>-->
+    </div>
+    <button id="editProfileBtn" class="btn btn-primary">Edit Profile</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const token = localStorage.getItem('token'); // Токен для авторизации
+
+        // Функция загрузки профиля
+        function loadProfile() {
+            fetch(`http://localhost:8082/api/profile`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load profile');
+                    }
+                    return response.json();
+                })
+                .then(profile => {
+                    document.getElementById('username').textContent = profile.username;
+                    document.getElementById('email').textContent = profile.email;
+                    document.getElementById('phoneNumber').textContent = profile.phoneNumber || 'N/A';
+                    // document.getElementById('createdAt').textContent = profile.createdAt;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Загрузка профиля при загрузке страницы
+        loadProfile();
+
+        // Обработчик для кнопки редактирования профиля
+        document.getElementById('editProfileBtn').addEventListener('click', function() {
+            const updatedProfile = {
+                username: prompt("Enter new username:", document.getElementById('username').textContent),
+                email: prompt("Enter new email:", document.getElementById('email').textContent),
+                phoneNumber: prompt("Enter new phone number:", document.getElementById('phoneNumber').textContent)
+            };
+
+            fetch(`http://localhost:8082/api/profile`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify(updatedProfile)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to update profile');
+                    }
+                    return response.json();
+                })
+                .then(() => {
+                    alert("Profile updated successfully");
+                    loadProfile(); // Перезагрузить профиль после обновления
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    });
+</script>
+</body>
+</html>

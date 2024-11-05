@@ -1,0 +1,87 @@
+version: '3'
+services:
+  # Сервис для PostgreSQL базы данных для user-service
+  postgres-user:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: user_db       # База данных для user-service
+      POSTGRES_USER: postgres    # Имя пользователя для базы данных
+      POSTGRES_PASSWORD: postgres # Пароль для базы данных
+    ports:
+      - "5434:5432"  # Проброс порта для подключения извне (хост машины)
+
+  # Сервис для PostgreSQL базы данных для comment-service
+  postgres-comment:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: comment_db     # База данных для comment-service
+      POSTGRES_USER: postgres     # Имя пользователя для базы данных
+      POSTGRES_PASSWORD: postgres # Пароль для базы данных
+    ports:
+      - "5435:5432"               # Проброс порта для второго сервиса базы данных
+
+  postgres-score:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: score_db     # База данных для comment-service
+      POSTGRES_USER: postgres     # Имя пользователя для базы данных
+      POSTGRES_PASSWORD: postgres # Пароль для базы данных
+    ports:
+      - "5436:5432"               # Проброс порта для второго сервиса базы данных
+
+
+  # Сервис для user-service
+  user-service:
+    image: user-service:latest
+    build:
+      context: ./user-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-user:5432/user_db  # Указываем имя контейнера postgres-user
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      - postgres-user
+    ports:
+      - "8084:8084" # Проброс порта для доступа к сервису извне
+
+  # Сервис для comment-service
+  comment-service:
+    image: comment-service:latest
+    build:
+      context: ./comment-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-comment:5432/comment_db  # Указываем имя контейнера postgres-comment
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      - postgres-comment
+    ports:
+      - "8081:8081" # Проброс порта для доступа к сервису извне
+
+  score-service:
+    image: score-service:latest
+    build:
+      context: ./score-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-score:5432/score_db  # Указываем имя контейнера postgres-comment
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      - postgres-score
+    ports:
+      - "8086:8086" # Проброс порта для доступа к сервису извне
+
+
+  api-gateway:
+    image: api-gateway:latest
+    build:
+      context: ./api-gateway
+    ports:
+      - "8082:8082" # Проброс порта для доступа к сервису извне
+
+  server:
+    image: server:latest
+    build:
+      context: ./server
+    ports:
+      - "8085:8085" # Проброс порта для доступа к сервису извне

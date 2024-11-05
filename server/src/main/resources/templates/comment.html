@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="f-igri-ru-by-html-to">
+    <div class="background-shadow">
+        <div class="list">
+            <button class="item-link btn btn-orange btn-sm" onclick="window.location.href='/login'">Sign in</button>
+            <button class="item-link btn btn-orange btn-sm" onclick="window.location.href='/reg'">Sign up</button>
+            <button class="item-link btn btn-orange btn-sm" onclick="window.location.href='/start'">Play</button>
+        </div>
+        <div class="link-f-logoimage-png"></div>
+    </div>
+
+    <div class="data">
+        <form id="commentForm" class="custom-form">
+            <div class="form-group">
+                <label for="commentText">Comment</label>
+                <input type="text" id="commentText" class="form-control" name="commentText"/>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Comment</button>
+        </form>
+
+        <!-- Контейнер для вывода комментариев сразу под кнопкой -->
+        <div id="commentsContainer" class="mt-3">
+            <p>dasdsadasdasdsa</p>
+
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="overlap-2">
+            <p class="f-igri-ru">
+                <button class="text-wrapper-56" onclick="window.location.href='/comments'">Comments</button>
+                <span class="span"> | </span>
+                <button class="text-wrapper-56" onclick="window.location.href='/rating'">Rating</button>
+                <span class="span"> | </span>
+                <button class="text-wrapper-56" onclick="window.location.href='/score'">Top Scores</button>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript для отправки и отображения комментариев -->
+<script>
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const token = localStorage.getItem('token');
+        const commentText = document.getElementById('commentText').value;
+
+        fetch("http://localhost:8082/api/comment", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ commentText: commentText })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Ошибка отправки комментария');
+                }
+                // Проверка, есть ли тело у ответа
+                return response.text().then(text => text ? JSON.parse(text) : {});
+            })
+            .then(() => {
+                // Очистить поле ввода после успешной отправки
+                document.getElementById('commentText').value = '';
+                // Обновить список комментариев
+                loadComments();
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+
+    // Функция для загрузки и отображения комментариев
+    document.addEventListener('DOMContentLoaded', () => {
+        // Загрузка комментариев при загрузке страницы
+        loadComments();
+
+        // Установка интервала для обновления комментариев каждые 10 секунд
+        setInterval(loadComments, 10000); // 10000 миллисекунд = 10 секунд
+    });
+
+    // Функция для загрузки и отображения комментариев
+    function loadComments() {
+        const token = localStorage.getItem('token');
+
+        fetch("http://localhost:8082/api/comment", {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Ошибка загрузки комментариев: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(comments => {
+                const commentsContainer = document.getElementById('commentsContainer');
+                commentsContainer.innerHTML = ''; // Очищаем контейнер перед обновлением
+
+                if (Array.isArray(comments) && comments.length > 0) {
+                    comments.forEach(comment => {
+                        const commentElement = document.createElement('p');
+                        commentElement.textContent = comment.comment;
+                        commentElement.className = 'comment-item'; // Добавляем класс для стилей
+                        commentsContainer.appendChild(commentElement);
+                    });
+                } else {
+                    commentsContainer.innerHTML = '<p>No comments available.</p>'; // Сообщение, если комментариев нет
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
+</body>
+</html>

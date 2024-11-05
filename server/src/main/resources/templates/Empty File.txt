@@ -1,0 +1,836 @@
+2024-10-14T20:23:13.012247772Z 2024-10-14T20:23:12.997Z  INFO 1 --- [api-gateway] [           main] c.f.apigateway.ApiGatewayApplication     : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/api-gateway.jar started by root in /app)
+2024-10-14T20:23:13.014764511Z 2024-10-14T20:23:13.014Z  INFO 1 --- [api-gateway] [           main] c.f.apigateway.ApiGatewayApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T20:23:15.604290074Z 2024-10-14T20:23:15.603Z  INFO 1 --- [api-gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0602a48a-1ce2-3587-9b93-5a5b3d1b9f57
+2024-10-14T20:23:17.088870062Z 2024-10-14T20:23:17.088Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2024-10-14T20:23:17.088915729Z 2024-10-14T20:23:17.088Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2024-10-14T20:23:17.089949905Z 2024-10-14T20:23:17.088Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2024-10-14T20:23:17.089965765Z 2024-10-14T20:23:17.088Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2024-10-14T20:23:17.089969341Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2024-10-14T20:23:17.089971896Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2024-10-14T20:23:17.089974631Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2024-10-14T20:23:17.089977487Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2024-10-14T20:23:17.089980122Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2024-10-14T20:23:17.089982877Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2024-10-14T20:23:17.089985662Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2024-10-14T20:23:17.089988337Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-10-14T20:23:17.090011200Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2024-10-14T20:23:17.090017402Z 2024-10-14T20:23:17.089Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-10-14T20:23:17.494232070Z 2024-10-14T20:23:17.492Z DEBUG 1 --- [api-gateway] [           main] reactor.netty.tcp.TcpResources           : [http] resources will use the default LoopResources: DefaultLoopResources {prefix=reactor-http, daemon=true, selectCount=12, workerCount=12}
+2024-10-14T20:23:17.501874513Z 2024-10-14T20:23:17.501Z DEBUG 1 --- [api-gateway] [           main] reactor.netty.tcp.TcpResources           : [http] resources will use the default ConnectionProvider: reactor.netty.resources.DefaultPooledConnectionProvider@4215e133
+2024-10-14T20:23:17.510762451Z 2024-10-14T20:23:17.510Z DEBUG 1 --- [api-gateway] [           main] r.netty.resources.DefaultLoopIOUring     : Default io_uring support : false
+2024-10-14T20:23:17.573462598Z 2024-10-14T20:23:17.572Z DEBUG 1 --- [api-gateway] [           main] r.netty.resources.DefaultLoopEpoll       : Default Epoll support : true
+2024-10-14T20:23:17.824916489Z 2024-10-14T20:23:17.824Z DEBUG 1 --- [api-gateway] [or-http-epoll-2] r.netty.transport.ServerTransport        : [34124ee4, L:/[0:0:0:0:0:0:0:0]:8082] Bound new server
+2024-10-14T20:23:17.834608278Z 2024-10-14T20:23:17.834Z  INFO 1 --- [api-gateway] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8082 (http)
+2024-10-14T20:23:18.007079530Z 2024-10-14T20:23:18.004Z  INFO 1 --- [api-gateway] [           main] c.f.apigateway.ApiGatewayApplication     : Started ApiGatewayApplication in 5.805 seconds (process running for 6.485)
+2024-10-14T20:23:23.798609008Z 2024-10-14T20:23:23.798Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] New http connection, requesting read
+2024-10-14T20:23:23.798717644Z 2024-10-14T20:23:23.798Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConfig        : [5586d2b3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpServerCodec), (reactor.left.httpTrafficHandler = reactor.netty.http.server.HttpTrafficHandler), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T20:23:23.812601340Z 2024-10-14T20:23:23.812Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Increasing pending responses count: 1
+2024-10-14T20:23:23.818682100Z 2024-10-14T20:23:23.818Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [5586d2b3-1, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@21fb3ea0
+2024-10-14T20:23:23.840879910Z 2024-10-14T20:23:23.840Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-1, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Last HTTP response frame
+2024-10-14T20:23:23.840906440Z 2024-10-14T20:23:23.840Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-1, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Headers are not sent before onComplete().
+2024-10-14T20:23:23.843078157Z 2024-10-14T20:23:23.842Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-1, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Decreasing pending responses count: 0
+2024-10-14T20:23:23.843822164Z 2024-10-14T20:23:23.843Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-1, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Last HTTP packet was sent, terminating the channel
+2024-10-14T20:23:23.843982517Z 2024-10-14T20:23:23.843Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [5586d2b3-1, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T20:23:23.844553547Z 2024-10-14T20:23:23.844Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.channel.ChannelOperationsHandler     : [5586d2b3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] No ChannelOperation attached.
+2024-10-14T20:23:23.845541826Z 2024-10-14T20:23:23.845Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Increasing pending responses count: 1
+2024-10-14T20:23:23.845702901Z 2024-10-14T20:23:23.845Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [5586d2b3-2, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@21fb3ea0
+2024-10-14T20:23:23.853511308Z 2024-10-14T20:23:23.853Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: user-service
+2024-10-14T20:23:23.853734630Z 2024-10-14T20:23:23.853Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8082/api/authenticate] to Route{id='user-service', uri=http://user-service:8084, order=0, predicate=Paths: [/api/authenticate, /api/register, /api/validate-token], match trailing slash: true, gatewayFilters=[], metadata={}}
+2024-10-14T20:23:23.853855328Z 2024-10-14T20:23:23.853Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : [5586d2b3-2] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@791e0c03
+2024-10-14T20:23:23.854563758Z 2024-10-14T20:23:23.854Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@5f36c8e3}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@309cedb6}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@682af059}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@5584d9c6}, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@4da39ca9}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@6d0be7ab}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@3c9c6245}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@32a2a6be}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@6a9344f5}, order = 2147483647]]
+2024-10-14T20:23:23.870995984Z 2024-10-14T20:23:23.870Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : Creating a new [proxy] client pool [PoolFactory{evictionInterval=PT0S, leasingStrategy=fifo, maxConnections=2147483647, maxIdleTime=-1, maxLifeTime=-1, metricsEnabled=false, pendingAcquireMaxCount=-1, pendingAcquireTimeout=0}] for [user-service/<unresolved>:8084]
+2024-10-14T20:23:23.879745902Z 2024-10-14T20:23:23.879Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [44b5dbd6] Created a new pooled channel, now: 0 active connections, 0 inactive connections and 0 pending acquire requests.
+2024-10-14T20:23:23.883128529Z 2024-10-14T20:23:23.882Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConfig        : [44b5dbd6] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T20:23:23.913966499Z 2024-10-14T20:23:23.913Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [44b5dbd6] Connecting to [user-service/172.18.0.7:8084].
+2024-10-14T20:23:23.916109982Z 2024-10-14T20:23:23.915Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] Registering pool release on close event for channel
+2024-10-14T20:23:23.916329057Z 2024-10-14T20:23:23.916Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] Channel connected, now: 1 active connections, 0 inactive connections and 0 pending acquire requests.
+2024-10-14T20:23:23.916441910Z 2024-10-14T20:23:23.916Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] onStateChange(PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084]}, [connected])
+2024-10-14T20:23:23.919112931Z 2024-10-14T20:23:23.918Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] onStateChange(GET{uri=null, connection=PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084]}}, [configured])
+2024-10-14T20:23:23.919280128Z 2024-10-14T20:23:23.919Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.http.client.HttpClientConnect    : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] Handler is being applied: {uri=http://user-service:8084/api/authenticate, method=POST}
+2024-10-14T20:23:23.919804459Z 2024-10-14T20:23:23.919Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084]}}, [request_prepared])
+2024-10-14T20:23:23.928528588Z 2024-10-14T20:23:23.927Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.channel.FluxReceive        : [5586d2b3-2, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] [terminated=true, cancelled=false, pending=1, error=null]: subscribing inbound receiver
+2024-10-14T20:23:23.931370743Z 2024-10-14T20:23:23.931Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084]}}, [request_sent])
+2024-10-14T20:23:24.345187851Z 2024-10-14T20:23:24.344Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.client.HttpClientOperations     : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] Received response (auto-read:false) : RESPONSE(decodeResult: success, version: HTTP/1.1)
+2024-10-14T20:23:24.345220062Z HTTP/1.1 200 
+2024-10-14T20:23:24.345222697Z Vary: <filtered>
+2024-10-14T20:23:24.345224982Z Vary: <filtered>
+2024-10-14T20:23:24.345226795Z Vary: <filtered>
+2024-10-14T20:23:24.345228448Z X-Content-Type-Options: <filtered>
+2024-10-14T20:23:24.345230312Z X-XSS-Protection: <filtered>
+2024-10-14T20:23:24.345231945Z Cache-Control: <filtered>
+2024-10-14T20:23:24.345233698Z Pragma: <filtered>
+2024-10-14T20:23:24.345235321Z Expires: <filtered>
+2024-10-14T20:23:24.345236924Z X-Frame-Options: <filtered>
+2024-10-14T20:23:24.345238547Z Content-Type: <filtered>
+2024-10-14T20:23:24.345240150Z Transfer-Encoding: <filtered>
+2024-10-14T20:23:24.345241803Z Date: <filtered>
+2024-10-14T20:23:24.345247103Z 2024-10-14T20:23:24.345Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084]}}, [response_received])
+2024-10-14T20:23:24.347761258Z 2024-10-14T20:23:24.347Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.channel.FluxReceive        : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] [terminated=false, cancelled=false, pending=0, error=null]: subscribing inbound receiver
+2024-10-14T20:23:24.350178109Z 2024-10-14T20:23:24.349Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.client.HttpClientOperations     : [44b5dbd6-1, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] Received last HTTP packet
+2024-10-14T20:23:24.350427811Z 2024-10-14T20:23:24.350Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-2, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Last HTTP response frame
+2024-10-14T20:23:24.350527991Z 2024-10-14T20:23:24.350Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-2, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Decreasing pending responses count: 0
+2024-10-14T20:23:24.350640584Z 2024-10-14T20:23:24.350Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-2, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Last HTTP packet was sent, terminating the channel
+2024-10-14T20:23:24.350699976Z 2024-10-14T20:23:24.350Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [5586d2b3-2, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T20:23:24.350839971Z 2024-10-14T20:23:24.350Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084]}}, [response_completed])
+2024-10-14T20:23:24.350888032Z 2024-10-14T20:23:24.350Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084]}}, [disconnecting])
+2024-10-14T20:23:24.350932947Z 2024-10-14T20:23:24.350Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] Releasing channel
+2024-10-14T20:23:24.352280956Z 2024-10-14T20:23:24.352Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [44b5dbd6, L:/172.18.0.2:43028 - R:user-service/172.18.0.7:8084] Channel cleaned, now: 0 active connections, 1 inactive connections and 0 pending acquire requests.
+2024-10-14T20:23:30.896611436Z 2024-10-14T20:23:30.896Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Increasing pending responses count: 1
+2024-10-14T20:23:30.896844677Z 2024-10-14T20:23:30.896Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [5586d2b3-3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@21fb3ea0
+2024-10-14T20:23:30.897577523Z 2024-10-14T20:23:30.897Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: secured-comments
+2024-10-14T20:23:30.897654899Z 2024-10-14T20:23:30.897Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: GET http://localhost:8082/api/comment] to Route{id='secured-comments', uri=http://comment-service:8081, order=0, predicate=Paths: [/api/comment], match trailing slash: true, gatewayFilters=[[com.forum.apigateway.JwtAuthGatewayFilter@61c0ce9e, order = 0]], metadata={}}
+2024-10-14T20:23:30.897681710Z 2024-10-14T20:23:30.897Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : [5586d2b3-3] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@791e0c03
+2024-10-14T20:23:30.897801787Z 2024-10-14T20:23:30.897Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@5f36c8e3}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@309cedb6}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@682af059}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@5584d9c6}, order = 0], [com.forum.apigateway.JwtAuthGatewayFilter@61c0ce9e, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@4da39ca9}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@6d0be7ab}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@3c9c6245}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@32a2a6be}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@6a9344f5}, order = 2147483647]]
+2024-10-14T20:23:30.913554468Z 2024-10-14T20:23:30.909Z ERROR 1 --- [api-gateway] [or-http-epoll-3] a.w.r.e.AbstractErrorWebExceptionHandler : [5586d2b3-3]  500 Server Error for HTTP GET "/api/comment"
+2024-10-14T20:23:30.913591788Z 
+2024-10-14T20:23:30.913595756Z java.lang.RuntimeException: Missing or invalid Authorization header
+2024-10-14T20:23:30.913599012Z 	at com.forum.apigateway.JwtAuthGatewayFilter.filter(JwtAuthGatewayFilter.java:24) ~[!/:0.0.1-SNAPSHOT]
+2024-10-14T20:23:30.913603070Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+2024-10-14T20:23:30.913606015Z Error has been observed at the following site(s):
+2024-10-14T20:23:30.913608951Z 	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+2024-10-14T20:23:30.913612528Z 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+2024-10-14T20:23:30.913615814Z 	*__checkpoint ⇢ HTTP GET "/api/comment" [ExceptionHandlingWebHandler]
+2024-10-14T20:23:30.913618940Z Original Stack Trace:
+2024-10-14T20:23:30.913621865Z 		at com.forum.apigateway.JwtAuthGatewayFilter.filter(JwtAuthGatewayFilter.java:24) ~[!/:0.0.1-SNAPSHOT]
+2024-10-14T20:23:30.913624821Z 		at org.springframework.cloud.gateway.filter.OrderedGatewayFilter.filter(OrderedGatewayFilter.java:44) ~[spring-cloud-gateway-server-4.1.0.jar!/:4.1.0]
+2024-10-14T20:23:30.913628167Z 		at org.springframework.cloud.gateway.handler.FilteringWebHandler$DefaultGatewayFilterChain.lambda$filter$0(FilteringWebHandler.java:117) ~[spring-cloud-gateway-server-4.1.0.jar!/:4.1.0]
+2024-10-14T20:23:30.913631333Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913634219Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913637224Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913640551Z 		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913644037Z 		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913647724Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913651161Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913656531Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913676258Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913679965Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913683261Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913686788Z 		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913690345Z 		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913693631Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913697078Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913700414Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913703750Z 		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913707357Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913710723Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913714330Z 		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913718007Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913721684Z 		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913725000Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913728246Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913732074Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913735911Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913739518Z 		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913742994Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913751260Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913755137Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.onNext(MonoFilterWhen.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913758614Z 		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913761940Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.request(MonoFilterWhen.java:183) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913765707Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913769374Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913772761Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onSubscribe(FluxOnErrorResume.java:74) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913776087Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913779654Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.onSubscribe(MonoFilterWhen.java:100) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913783130Z 		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913786426Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913790324Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:207) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913793961Z 		at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913797357Z 		at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913800904Z 		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913804280Z 		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913807597Z 		at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913810983Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerComplete(FluxConcatMapNoPrefetch.java:275) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913814680Z 		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onComplete(FluxConcatMap.java:889) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913823266Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913826903Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913830380Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.onNext(MonoFilterWhen.java:141) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913834127Z 		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913837643Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.request(MonoFilterWhen.java:183) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913841280Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913844637Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913848484Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913852281Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913855687Z 		at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913858944Z 		at reactor.core.publisher.FluxMap$MapSubscriber.request(FluxMap.java:164) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913862340Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913865666Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913869043Z 		at reactor.core.publisher.FluxMap$MapSubscriber.request(FluxMap.java:164) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913872429Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913875846Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913879472Z 		at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913882839Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913886295Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913889541Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913897386Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913900823Z 		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913904179Z 		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913907846Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913911212Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913914589Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913917925Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913921472Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913924748Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913928345Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913932463Z 		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913935839Z 		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913939356Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913942802Z 		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:30.913946279Z 		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1176) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:30.913949745Z 		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:715) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:30.913953412Z 		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:30.913956959Z 		at reactor.netty.http.server.HttpServerOperations.handleDefaultHttpRequest(HttpServerOperations.java:829) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:30.913960626Z 		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:774) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:30.913964223Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:30.913973330Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.913977297Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.913980854Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.913984371Z 		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:262) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:30.913988068Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.913991615Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.913994730Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.913997616Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914000501Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914003287Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914006152Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914008957Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914011803Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914015410Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914018355Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914021140Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914024046Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914030298Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914033173Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914036239Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914039054Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914041789Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914044595Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914047079Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:30.914049885Z 		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T20:23:30.914052580Z 
+2024-10-14T20:23:30.963411216Z 2024-10-14T20:23:30.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Last HTTP response frame
+2024-10-14T20:23:30.963447404Z 2024-10-14T20:23:30.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Headers are not sent before onComplete().
+2024-10-14T20:23:30.963735619Z 2024-10-14T20:23:30.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Decreasing pending responses count: 0
+2024-10-14T20:23:30.963948462Z 2024-10-14T20:23:30.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [5586d2b3-3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] Last HTTP packet was sent, terminating the channel
+2024-10-14T20:23:30.963997935Z 2024-10-14T20:23:30.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [5586d2b3-3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T20:23:30.964316448Z 2024-10-14T20:23:30.964Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.channel.ChannelOperationsHandler     : [5586d2b3, L:/172.18.0.2:8082 - R:/172.18.0.1:56866] No ChannelOperation attached.
+2024-10-14T20:23:36.990583285Z 2024-10-14T20:23:36.990Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] New http connection, requesting read
+2024-10-14T20:23:36.990633310Z 2024-10-14T20:23:36.990Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.netty.transport.TransportConfig        : [1f1bca5e, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpServerCodec), (reactor.left.httpTrafficHandler = reactor.netty.http.server.HttpTrafficHandler), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T20:23:36.992106857Z 2024-10-14T20:23:36.991Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Increasing pending responses count: 1
+2024-10-14T20:23:36.992272259Z 2024-10-14T20:23:36.992Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] reactor.netty.http.server.HttpServer     : [1f1bca5e-1, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@21fb3ea0
+2024-10-14T20:23:36.995103354Z 2024-10-14T20:23:36.994Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: secured-comments
+2024-10-14T20:23:36.995214784Z 2024-10-14T20:23:36.995Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8082/api/comment] to Route{id='secured-comments', uri=http://comment-service:8081, order=0, predicate=Paths: [/api/comment], match trailing slash: true, gatewayFilters=[[com.forum.apigateway.JwtAuthGatewayFilter@61c0ce9e, order = 0]], metadata={}}
+2024-10-14T20:23:36.995241655Z 2024-10-14T20:23:36.995Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] o.s.c.g.h.RoutePredicateHandlerMapping   : [1f1bca5e-4] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@791e0c03
+2024-10-14T20:23:36.995371310Z 2024-10-14T20:23:36.995Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@5f36c8e3}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@309cedb6}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@682af059}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@5584d9c6}, order = 0], [com.forum.apigateway.JwtAuthGatewayFilter@61c0ce9e, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@4da39ca9}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@6d0be7ab}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@3c9c6245}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@32a2a6be}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@6a9344f5}, order = 2147483647]]
+2024-10-14T20:23:37.009597504Z 2024-10-14T20:23:37.007Z ERROR 1 --- [api-gateway] [or-http-epoll-4] a.w.r.e.AbstractErrorWebExceptionHandler : [1f1bca5e-4]  500 Server Error for HTTP POST "/api/comment"
+2024-10-14T20:23:37.009626589Z 
+2024-10-14T20:23:37.009629775Z java.lang.RuntimeException: Missing or invalid Authorization header
+2024-10-14T20:23:37.009632380Z 	at com.forum.apigateway.JwtAuthGatewayFilter.filter(JwtAuthGatewayFilter.java:24) ~[!/:0.0.1-SNAPSHOT]
+2024-10-14T20:23:37.009635326Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+2024-10-14T20:23:37.009649052Z Error has been observed at the following site(s):
+2024-10-14T20:23:37.009651817Z 	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+2024-10-14T20:23:37.009654863Z 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+2024-10-14T20:23:37.009657618Z 	*__checkpoint ⇢ HTTP POST "/api/comment" [ExceptionHandlingWebHandler]
+2024-10-14T20:23:37.009660313Z Original Stack Trace:
+2024-10-14T20:23:37.009662678Z 		at com.forum.apigateway.JwtAuthGatewayFilter.filter(JwtAuthGatewayFilter.java:24) ~[!/:0.0.1-SNAPSHOT]
+2024-10-14T20:23:37.009665172Z 		at org.springframework.cloud.gateway.filter.OrderedGatewayFilter.filter(OrderedGatewayFilter.java:44) ~[spring-cloud-gateway-server-4.1.0.jar!/:4.1.0]
+2024-10-14T20:23:37.009667737Z 		at org.springframework.cloud.gateway.handler.FilteringWebHandler$DefaultGatewayFilterChain.lambda$filter$0(FilteringWebHandler.java:117) ~[spring-cloud-gateway-server-4.1.0.jar!/:4.1.0]
+2024-10-14T20:23:37.009670432Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009673067Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009675592Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009751776Z 		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009800228Z 		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009820035Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009849541Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009879297Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009925084Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.009975539Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010033489Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010076921Z 		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010117117Z 		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010141052Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010167573Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010211476Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010239789Z 		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010290756Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010320091Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010348585Z 		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010367060Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010382519Z 		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010418277Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010444396Z 		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010474363Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010496825Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010524828Z 		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010547872Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010580363Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010612003Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.onNext(MonoFilterWhen.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010640126Z 		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010674141Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.request(MonoFilterWhen.java:183) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010693728Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010711812Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010751046Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onSubscribe(FluxOnErrorResume.java:74) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010779750Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010800049Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.onSubscribe(MonoFilterWhen.java:100) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010820708Z 		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010839032Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010859050Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:207) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010872536Z 		at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010896341Z 		at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010914074Z 		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010933160Z 		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010967545Z 		at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.010995168Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerComplete(FluxConcatMapNoPrefetch.java:275) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011035123Z 		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onComplete(FluxConcatMap.java:889) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011053288Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011087853Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011120264Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.onNext(MonoFilterWhen.java:141) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011132618Z 		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011167103Z 		at reactor.core.publisher.MonoFilterWhen$MonoFilterWhenMain.request(MonoFilterWhen.java:183) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011204494Z 		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011234049Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011268845Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011288402Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011322036Z 		at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011357463Z 		at reactor.core.publisher.FluxMap$MapSubscriber.request(FluxMap.java:164) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011387910Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.request(MonoFlatMap.java:194) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011408519Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011420592Z 		at reactor.core.publisher.FluxMap$MapSubscriber.request(FluxMap.java:164) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011449848Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011470677Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011500303Z 		at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011516093Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011551189Z 		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011586586Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011625860Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011646049Z 		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011668150Z 		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011674212Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011677268Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011680614Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011689781Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011693098Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011696033Z 		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011699179Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011702425Z 		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011705571Z 		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011708597Z 		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011712074Z 		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T20:23:37.011758121Z 		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1176) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:37.011772848Z 		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:715) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:37.011799689Z 		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:481) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:37.011820448Z 		at reactor.netty.http.server.HttpServerOperations.handleDefaultHttpRequest(HttpServerOperations.java:829) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:37.011838242Z 		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:774) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:37.011881444Z 		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:37.011908856Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.011956656Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.011984869Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012012852Z 		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:262) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T20:23:37.012052487Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012084027Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012118432Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012145233Z 		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012195327Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012231486Z 		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012265560Z 		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:455) ~[netty-codec-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012295707Z 		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012326265Z 		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012348447Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012377001Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012399353Z 		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012403732Z 		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012408420Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012411586Z 		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012414402Z 		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) ~[netty-transport-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012416977Z 		at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012420153Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012428148Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012431264Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012434239Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012437355Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T20:23:37.012440431Z 		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T20:23:37.012443086Z 
+2024-10-14T20:23:37.012546031Z 2024-10-14T20:23:37.012Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-1, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Last HTTP response frame
+2024-10-14T20:23:37.012585075Z 2024-10-14T20:23:37.012Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-1, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Headers are not sent before onComplete().
+2024-10-14T20:23:37.012878289Z 2024-10-14T20:23:37.012Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-1, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Decreasing pending responses count: 0
+2024-10-14T20:23:37.013158259Z 2024-10-14T20:23:37.013Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-1, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Last HTTP packet was sent, terminating the channel
+2024-10-14T20:23:37.013203815Z 2024-10-14T20:23:37.013Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.netty.channel.ChannelOperations        : [1f1bca5e-1, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T20:23:37.013400607Z 2024-10-14T20:23:37.013Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.channel.ChannelOperationsHandler     : [1f1bca5e, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] No ChannelOperation attached.
+2024-10-14T20:23:37.078480644Z 2024-10-14T20:23:37.078Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Increasing pending responses count: 1
+2024-10-14T20:23:37.078681534Z 2024-10-14T20:23:37.078Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] reactor.netty.http.server.HttpServer     : [1f1bca5e-2, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@21fb3ea0
+2024-10-14T20:23:37.084063112Z 2024-10-14T20:23:37.083Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-2, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Last HTTP response frame
+2024-10-14T20:23:37.084091345Z 2024-10-14T20:23:37.084Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-2, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Headers are not sent before onComplete().
+2024-10-14T20:23:37.084324667Z 2024-10-14T20:23:37.084Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-2, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Decreasing pending responses count: 0
+2024-10-14T20:23:37.084441498Z 2024-10-14T20:23:37.084Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.http.server.HttpServerOperations     : [1f1bca5e-2, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] Last HTTP packet was sent, terminating the channel
+2024-10-14T20:23:37.084504046Z 2024-10-14T20:23:37.084Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.netty.channel.ChannelOperations        : [1f1bca5e-2, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T20:23:37.084624484Z 2024-10-14T20:23:37.084Z DEBUG 1 --- [api-gateway] [or-http-epoll-4] r.n.channel.ChannelOperationsHandler     : [1f1bca5e, L:/172.18.0.2:8082 - R:/172.18.0.1:47978] No ChannelOperation attached.
+2024-10-14T20:24:24.402997847Z 2024-10-14T20:24:24.402Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [44b5dbd6, L:/172.18.0.2:43028 ! R:user-service/172.18.0.7:8084] onStateChange(PooledConnection{channel=[id: 0x44b5dbd6, L:/172.18.0.2:43028 ! R:user-service/172.18.0.7:8084]}, [disconnecting])
+2024-10-14T21:16:45.557785307Z 2024-10-14T21:16:45.553Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.n.http.server.HttpServerOperations     : [989b1ef8, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] New http connection, requesting read
+2024-10-14T21:16:45.561234226Z 2024-10-14T21:16:45.555Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.netty.transport.TransportConfig        : [989b1ef8, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpServerCodec), (reactor.left.httpTrafficHandler = reactor.netty.http.server.HttpTrafficHandler), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T21:16:45.561243734Z 2024-10-14T21:16:45.560Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.n.http.server.HttpServerOperations     : [989b1ef8, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] Increasing pending responses count: 1
+2024-10-14T21:16:45.561247320Z 2024-10-14T21:16:45.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] reactor.netty.http.server.HttpServer     : [989b1ef8-1, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@21fb3ea0
+2024-10-14T21:16:45.566762665Z 2024-10-14T21:16:45.566Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.n.http.server.HttpServerOperations     : [989b1ef8-1, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] Last HTTP response frame
+2024-10-14T21:16:45.566785789Z 2024-10-14T21:16:45.566Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.n.http.server.HttpServerOperations     : [989b1ef8-1, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] Headers are not sent before onComplete().
+2024-10-14T21:16:45.567067181Z 2024-10-14T21:16:45.566Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.n.http.server.HttpServerOperations     : [989b1ef8-1, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] Decreasing pending responses count: 0
+2024-10-14T21:16:45.567287888Z 2024-10-14T21:16:45.567Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.n.http.server.HttpServerOperations     : [989b1ef8-1, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:16:45.567371145Z 2024-10-14T21:16:45.567Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.netty.channel.ChannelOperations        : [989b1ef8-1, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:16:45.567427362Z 2024-10-14T21:16:45.567Z DEBUG 1 --- [api-gateway] [or-http-epoll-5] r.n.channel.ChannelOperationsHandler     : [989b1ef8, L:/172.18.0.2:8082 - R:/172.18.0.1:37326] No ChannelOperation attached.
+2024-10-14T21:17:37.540913948Z 2024-10-14T21:17:37.540Z DEBUG 1 --- [api-gateway] [ionShutdownHook] r.netty.transport.ServerTransport        : [34124ee4, L:/[0:0:0:0:0:0:0:0]:8082] Server is about to be disposed with timeout: PT3S
+2024-10-14T21:18:04.765757522Z 
+2024-10-14T21:18:04.765812546Z   .   ____          _            __ _ _
+2024-10-14T21:18:04.765817696Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2024-10-14T21:18:04.765822505Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2024-10-14T21:18:04.765826322Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2024-10-14T21:18:04.765830049Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2024-10-14T21:18:04.765833636Z  =========|_|==============|___/=/_/_/_/
+2024-10-14T21:18:04.765837293Z 
+2024-10-14T21:18:04.768322440Z  :: Spring Boot ::                (v3.3.4)
+2024-10-14T21:18:04.768359360Z 
+2024-10-14T21:18:05.012179423Z 2024-10-14T21:18:05.008Z  INFO 1 --- [api-gateway] [           main] c.f.apigateway.ApiGatewayApplication     : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/api-gateway.jar started by root in /app)
+2024-10-14T21:18:05.018460776Z 2024-10-14T21:18:05.017Z  INFO 1 --- [api-gateway] [           main] c.f.apigateway.ApiGatewayApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-14T21:18:07.752470168Z 2024-10-14T21:18:07.751Z  INFO 1 --- [api-gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0602a48a-1ce2-3587-9b93-5a5b3d1b9f57
+2024-10-14T21:18:09.318911981Z 2024-10-14T21:18:09.318Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2024-10-14T21:18:09.318980670Z 2024-10-14T21:18:09.318Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2024-10-14T21:18:09.319017901Z 2024-10-14T21:18:09.318Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2024-10-14T21:18:09.319151233Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2024-10-14T21:18:09.319202269Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2024-10-14T21:18:09.319251302Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2024-10-14T21:18:09.319300214Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2024-10-14T21:18:09.319381338Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2024-10-14T21:18:09.319457622Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2024-10-14T21:18:09.319513868Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2024-10-14T21:18:09.319553062Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2024-10-14T21:18:09.319605942Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2024-10-14T21:18:09.319720299Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2024-10-14T21:18:09.319785592Z 2024-10-14T21:18:09.319Z  INFO 1 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2024-10-14T21:18:09.632789185Z 2024-10-14T21:18:09.630Z DEBUG 1 --- [api-gateway] [           main] reactor.netty.tcp.TcpResources           : [http] resources will use the default LoopResources: DefaultLoopResources {prefix=reactor-http, daemon=true, selectCount=12, workerCount=12}
+2024-10-14T21:18:09.632883213Z 2024-10-14T21:18:09.632Z DEBUG 1 --- [api-gateway] [           main] reactor.netty.tcp.TcpResources           : [http] resources will use the default ConnectionProvider: reactor.netty.resources.DefaultPooledConnectionProvider@d88f893
+2024-10-14T21:18:09.643375526Z 2024-10-14T21:18:09.642Z DEBUG 1 --- [api-gateway] [           main] r.netty.resources.DefaultLoopIOUring     : Default io_uring support : false
+2024-10-14T21:18:09.687679074Z 2024-10-14T21:18:09.687Z DEBUG 1 --- [api-gateway] [           main] r.netty.resources.DefaultLoopEpoll       : Default Epoll support : true
+2024-10-14T21:18:09.851619040Z 2024-10-14T21:18:09.851Z DEBUG 1 --- [api-gateway] [or-http-epoll-2] r.netty.transport.ServerTransport        : [2f5abdbe, L:/[0:0:0:0:0:0:0:0]:8082] Bound new server
+2024-10-14T21:18:09.856229045Z 2024-10-14T21:18:09.855Z  INFO 1 --- [api-gateway] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8082 (http)
+2024-10-14T21:18:09.950025038Z 2024-10-14T21:18:09.949Z  INFO 1 --- [api-gateway] [           main] c.f.apigateway.ApiGatewayApplication     : Started ApiGatewayApplication in 5.74 seconds (process running for 6.423)
+2024-10-14T21:18:14.216523836Z 2024-10-14T21:18:14.216Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] New http connection, requesting read
+2024-10-14T21:18:14.216835375Z 2024-10-14T21:18:14.216Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConfig        : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpServerCodec), (reactor.left.httpTrafficHandler = reactor.netty.http.server.HttpTrafficHandler), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T21:18:14.241104951Z 2024-10-14T21:18:14.240Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Increasing pending responses count: 1
+2024-10-14T21:18:14.250975490Z 2024-10-14T21:18:14.250Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [0bc2892a-1, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@1891067c
+2024-10-14T21:18:14.281718955Z 2024-10-14T21:18:14.281Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-1, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP response frame
+2024-10-14T21:18:14.281761505Z 2024-10-14T21:18:14.281Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-1, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Headers are not sent before onComplete().
+2024-10-14T21:18:14.284590603Z 2024-10-14T21:18:14.284Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-1, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Decreasing pending responses count: 0
+2024-10-14T21:18:14.285386989Z 2024-10-14T21:18:14.285Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-1, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:18:14.285579753Z 2024-10-14T21:18:14.285Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [0bc2892a-1, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:18:14.286276340Z 2024-10-14T21:18:14.286Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.channel.ChannelOperationsHandler     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] No ChannelOperation attached.
+2024-10-14T21:18:14.287521764Z 2024-10-14T21:18:14.287Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Increasing pending responses count: 1
+2024-10-14T21:18:14.287776125Z 2024-10-14T21:18:14.287Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [0bc2892a-2, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@1891067c
+2024-10-14T21:18:14.300163251Z 2024-10-14T21:18:14.299Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: secured-comments
+2024-10-14T21:18:14.300574468Z 2024-10-14T21:18:14.300Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8082/api/comment] to Route{id='secured-comments', uri=http://comment-service:8081, order=0, predicate=Paths: [/api/comment], match trailing slash: true, gatewayFilters=[[com.forum.apigateway.JwtAuthGatewayFilter@1b8f85d2, order = 0]], metadata={}}
+2024-10-14T21:18:14.300724862Z 2024-10-14T21:18:14.300Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : [0bc2892a-2] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@2d470237
+2024-10-14T21:18:14.301776470Z 2024-10-14T21:18:14.301Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@6a9344f5}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@3bf54172}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4da39ca9}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@6d0be7ab}, order = 0], [com.forum.apigateway.JwtAuthGatewayFilter@1b8f85d2, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@5584d9c6}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@6ef60295}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@1d4fb213}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@5f36c8e3}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@3c9c6245}, order = 2147483647]]
+2024-10-14T21:18:14.350025626Z 2024-10-14T21:18:14.349Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : Creating a new [http] client pool [PoolFactory{evictionInterval=PT0S, leasingStrategy=fifo, maxConnections=500, maxIdleTime=-1, maxLifeTime=-1, metricsEnabled=false, pendingAcquireMaxCount=1000, pendingAcquireTimeout=45000}] for [localhost/<unresolved>:8084]
+2024-10-14T21:18:14.361197945Z 2024-10-14T21:18:14.360Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [abd08ffe] Created a new pooled channel, now: 0 active connections, 0 inactive connections and 0 pending acquire requests.
+2024-10-14T21:18:14.368123066Z 2024-10-14T21:18:14.367Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConfig        : [abd08ffe] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.left.httpDecompressor = io.netty.handler.codec.http.HttpContentDecompressor), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T21:18:14.394232231Z 2024-10-14T21:18:14.393Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [abd08ffe] Connecting to [localhost/127.0.0.1:8084].
+2024-10-14T21:18:14.399571553Z 2024-10-14T21:18:14.396Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [abd08ffe] Connect attempt to [localhost/127.0.0.1:8084] failed.
+2024-10-14T21:18:14.399610276Z 
+2024-10-14T21:18:14.399614034Z io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:18:14.399617480Z Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+2024-10-14T21:18:14.399620355Z 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399623732Z 	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399626347Z 	at io.netty.channel.unix.Socket.finishConnect(Socket.java:359) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399629713Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:715) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399649911Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:692) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399652657Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399655141Z 	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399657526Z 	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399660030Z 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399662375Z 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399665481Z 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.399668146Z 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:18:14.399670340Z 
+2024-10-14T21:18:14.419835910Z 2024-10-14T21:18:14.416Z ERROR 1 --- [api-gateway] [or-http-epoll-3] a.w.r.e.AbstractErrorWebExceptionHandler : [0bc2892a-2]  500 Server Error for HTTP POST "/api/comment"
+2024-10-14T21:18:14.419882668Z 
+2024-10-14T21:18:14.419886215Z org.springframework.web.reactive.function.client.WebClientRequestException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:18:14.419889391Z 	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136) ~[spring-webflux-6.1.13.jar!/:6.1.13]
+2024-10-14T21:18:14.419892777Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+2024-10-14T21:18:14.419895382Z Error has been observed at the following site(s):
+2024-10-14T21:18:14.419898097Z 	*__checkpoint ⇢ Request to POST http://localhost:8084/api/validate-token [DefaultWebClient]
+2024-10-14T21:18:14.419901483Z 	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+2024-10-14T21:18:14.419904189Z 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+2024-10-14T21:18:14.419906653Z 	*__checkpoint ⇢ HTTP POST "/api/comment" [ExceptionHandlingWebHandler]
+2024-10-14T21:18:14.419909449Z Original Stack Trace:
+2024-10-14T21:18:14.419912574Z 		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136) ~[spring-webflux-6.1.13.jar!/:6.1.13]
+2024-10-14T21:18:14.419915620Z 		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419941950Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419944996Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419947801Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419950586Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419954073Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419956718Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419960245Z 		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419962739Z 		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419965404Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:229) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419968310Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:279) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419971155Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419973860Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:327) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419976836Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:212) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419979431Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419982326Z 		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419984901Z 		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:620) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419987666Z 		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:874) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419990291Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.419993006Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:337) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420011171Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420014687Z 		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1743) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420102453Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:196) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420177515Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420195559Z 		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:311) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420205819Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420217150Z 		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:172) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420225857Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420237438Z 		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:480) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420245203Z 		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:436) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420248720Z 		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420251605Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420254721Z 		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:583) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420257777Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420260773Z 		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420263718Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420268016Z 		at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420270852Z 		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420273597Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420276593Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:14.420286531Z 		at reactor.netty.transport.TransportConnector$MonoChannelPromise.tryFailure(TransportConnector.java:576) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420289457Z 		at reactor.netty.transport.TransportConnector$MonoChannelPromise.setFailure(TransportConnector.java:522) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420292302Z 		at reactor.netty.transport.TransportConnector.lambda$doConnect$7(TransportConnector.java:261) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:14.420294837Z 		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420299145Z 		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420301860Z 		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420304335Z 		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420306719Z 		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420309214Z 		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420311779Z 		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420314574Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.fulfillConnectPromise(AbstractEpollChannel.java:679) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420317480Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:698) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420319995Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420322700Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420325244Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420327649Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420330024Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420332408Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420339010Z 		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:18:14.420341565Z Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:18:14.420344401Z Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+2024-10-14T21:18:14.420346755Z 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420349190Z 	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420351995Z 	at io.netty.channel.unix.Socket.finishConnect(Socket.java:359) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420354400Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:715) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420356764Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:692) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420360211Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420362695Z 	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420365290Z 	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420367945Z 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420370320Z 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420373245Z 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:14.420375800Z 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:18:14.420378054Z 
+2024-10-14T21:18:14.483581258Z 2024-10-14T21:18:14.483Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-2, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP response frame
+2024-10-14T21:18:14.483630501Z 2024-10-14T21:18:14.483Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-2, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Headers are not sent before onComplete().
+2024-10-14T21:18:14.484921301Z 2024-10-14T21:18:14.484Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-2, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Decreasing pending responses count: 0
+2024-10-14T21:18:14.485983599Z 2024-10-14T21:18:14.485Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-2, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:18:14.486086794Z 2024-10-14T21:18:14.485Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [0bc2892a-2, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:18:14.488859115Z 2024-10-14T21:18:14.488Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.channel.FluxReceive        : [0bc2892a-2, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [terminated=true, cancelled=true, pending=0, error=null]: dropping frame LAST_CONTENT(decodeResult: success, content: PooledSlicedByteBuf(ridx: 0, widx: 33, cap: 33/33, unwrapped: PooledUnsafeDirectByteBuf(ridx: 512, widx: 512, cap: 2048)))
+2024-10-14T21:18:15.595282275Z 2024-10-14T21:18:15.594Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Increasing pending responses count: 1
+2024-10-14T21:18:15.595583975Z 2024-10-14T21:18:15.595Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [0bc2892a-3, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@1891067c
+2024-10-14T21:18:15.596827816Z 2024-10-14T21:18:15.596Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: secured-comments
+2024-10-14T21:18:15.596978601Z 2024-10-14T21:18:15.596Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8082/api/comment] to Route{id='secured-comments', uri=http://comment-service:8081, order=0, predicate=Paths: [/api/comment], match trailing slash: true, gatewayFilters=[[com.forum.apigateway.JwtAuthGatewayFilter@1b8f85d2, order = 0]], metadata={}}
+2024-10-14T21:18:15.597048464Z 2024-10-14T21:18:15.596Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : [0bc2892a-3] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@2d470237
+2024-10-14T21:18:15.597442108Z 2024-10-14T21:18:15.597Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@6a9344f5}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@3bf54172}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4da39ca9}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@6d0be7ab}, order = 0], [com.forum.apigateway.JwtAuthGatewayFilter@1b8f85d2, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@5584d9c6}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@6ef60295}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@1d4fb213}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@5f36c8e3}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@3c9c6245}, order = 2147483647]]
+2024-10-14T21:18:15.600324035Z 2024-10-14T21:18:15.600Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [02006ce9] Created a new pooled channel, now: 0 active connections, 0 inactive connections and 0 pending acquire requests.
+2024-10-14T21:18:15.600502853Z 2024-10-14T21:18:15.600Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConfig        : [02006ce9] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.left.httpDecompressor = io.netty.handler.codec.http.HttpContentDecompressor), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T21:18:15.600825874Z 2024-10-14T21:18:15.600Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [02006ce9] Connecting to [localhost/127.0.0.1:8084].
+2024-10-14T21:18:15.601287957Z 2024-10-14T21:18:15.600Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [02006ce9] Connect attempt to [localhost/127.0.0.1:8084] failed.
+2024-10-14T21:18:15.601300120Z 
+2024-10-14T21:18:15.601304969Z io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:18:15.601309238Z Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+2024-10-14T21:18:15.601312494Z 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601316181Z 	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601319567Z 	at io.netty.channel.unix.Socket.finishConnect(Socket.java:359) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601322823Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:715) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601326190Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:692) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601329566Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601332852Z 	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601336088Z 	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601339284Z 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601342520Z 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601346227Z 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.601360695Z 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:18:15.601365764Z 
+2024-10-14T21:18:15.603826777Z 2024-10-14T21:18:15.602Z ERROR 1 --- [api-gateway] [or-http-epoll-3] a.w.r.e.AbstractErrorWebExceptionHandler : [0bc2892a-3]  500 Server Error for HTTP POST "/api/comment"
+2024-10-14T21:18:15.603840703Z 
+2024-10-14T21:18:15.603846073Z org.springframework.web.reactive.function.client.WebClientRequestException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:18:15.603851393Z 	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136) ~[spring-webflux-6.1.13.jar!/:6.1.13]
+2024-10-14T21:18:15.603856713Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+2024-10-14T21:18:15.603861723Z Error has been observed at the following site(s):
+2024-10-14T21:18:15.603865520Z 	*__checkpoint ⇢ Request to POST http://localhost:8084/api/validate-token [DefaultWebClient]
+2024-10-14T21:18:15.603870970Z 	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+2024-10-14T21:18:15.603875930Z 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+2024-10-14T21:18:15.603880328Z 	*__checkpoint ⇢ HTTP POST "/api/comment" [ExceptionHandlingWebHandler]
+2024-10-14T21:18:15.603884947Z Original Stack Trace:
+2024-10-14T21:18:15.603889034Z 		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136) ~[spring-webflux-6.1.13.jar!/:6.1.13]
+2024-10-14T21:18:15.603893453Z 		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603897731Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603901508Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603905826Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603910685Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603914643Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603918781Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603923880Z 		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603928299Z 		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603942155Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:229) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603947555Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:279) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603952374Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603958576Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:327) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603963465Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:212) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603967693Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603972362Z 		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603976810Z 		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:620) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603981710Z 		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:874) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603986419Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603990827Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:337) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.603996317Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604001768Z 		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1743) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604006026Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:196) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604010755Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604015153Z 		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:311) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604020002Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604024851Z 		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:172) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604035792Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604040581Z 		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:480) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604045711Z 		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:436) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604049848Z 		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604054056Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604058204Z 		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:583) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604062653Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604066921Z 		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604071189Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604076138Z 		at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604080246Z 		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604084394Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604089323Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:18:15.604093902Z 		at reactor.netty.transport.TransportConnector$MonoChannelPromise.tryFailure(TransportConnector.java:576) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604097979Z 		at reactor.netty.transport.TransportConnector$MonoChannelPromise.setFailure(TransportConnector.java:522) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604102388Z 		at reactor.netty.transport.TransportConnector.lambda$doConnect$7(TransportConnector.java:261) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:18:15.604106876Z 		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604111756Z 		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604116484Z 		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604120773Z 		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604130531Z 		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604135390Z 		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604140179Z 		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604164806Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.fulfillConnectPromise(AbstractEpollChannel.java:679) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604175787Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:698) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604181127Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604185816Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604190264Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604194332Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604198620Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604202537Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604206695Z 		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:18:15.604210703Z Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:18:15.604214870Z Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+2024-10-14T21:18:15.604218818Z 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604222856Z 	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604226933Z 	at io.netty.channel.unix.Socket.finishConnect(Socket.java:359) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604230791Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:715) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604240850Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:692) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604246280Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604250889Z 	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604255076Z 	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604259234Z 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604263412Z 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604267981Z 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:18:15.604272299Z 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:18:15.604276367Z 
+2024-10-14T21:18:15.604764008Z 2024-10-14T21:18:15.604Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-3, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP response frame
+2024-10-14T21:18:15.604807681Z 2024-10-14T21:18:15.604Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-3, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Headers are not sent before onComplete().
+2024-10-14T21:18:15.605140149Z 2024-10-14T21:18:15.605Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-3, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Decreasing pending responses count: 0
+2024-10-14T21:18:15.605326071Z 2024-10-14T21:18:15.605Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-3, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:18:15.605370284Z 2024-10-14T21:18:15.605Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [0bc2892a-3, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:18:15.605466015Z 2024-10-14T21:18:15.605Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.channel.FluxReceive        : [0bc2892a-3, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [terminated=true, cancelled=true, pending=0, error=null]: dropping frame LAST_CONTENT(decodeResult: success, content: PooledSlicedByteBuf(ridx: 0, widx: 33, cap: 33/33, unwrapped: PooledUnsafeDirectByteBuf(ridx: 512, widx: 512, cap: 1024)))
+2024-10-14T21:20:00.119554539Z 2024-10-14T21:20:00.119Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Increasing pending responses count: 1
+2024-10-14T21:20:00.119708991Z 2024-10-14T21:20:00.119Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [0bc2892a-4, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@1891067c
+2024-10-14T21:20:00.120569828Z 2024-10-14T21:20:00.120Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-4, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP response frame
+2024-10-14T21:20:00.120590327Z 2024-10-14T21:20:00.120Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-4, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Headers are not sent before onComplete().
+2024-10-14T21:20:00.120937423Z 2024-10-14T21:20:00.120Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-4, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Decreasing pending responses count: 0
+2024-10-14T21:20:00.121158632Z 2024-10-14T21:20:00.121Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-4, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:20:00.121230558Z 2024-10-14T21:20:00.121Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [0bc2892a-4, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:20:00.121308184Z 2024-10-14T21:20:00.121Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.channel.ChannelOperationsHandler     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] No ChannelOperation attached.
+2024-10-14T21:20:00.122358390Z 2024-10-14T21:20:00.122Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Increasing pending responses count: 1
+2024-10-14T21:20:00.122529894Z 2024-10-14T21:20:00.122Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [0bc2892a-5, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@1891067c
+2024-10-14T21:20:00.123191805Z 2024-10-14T21:20:00.123Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: user-service
+2024-10-14T21:20:00.123273209Z 2024-10-14T21:20:00.123Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8082/api/authenticate] to Route{id='user-service', uri=http://user-service:8084, order=0, predicate=Paths: [/api/authenticate, /api/register, /api/validate-token], match trailing slash: true, gatewayFilters=[], metadata={}}
+2024-10-14T21:20:00.123308927Z 2024-10-14T21:20:00.123Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : [0bc2892a-5] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@2d470237
+2024-10-14T21:20:00.123427511Z 2024-10-14T21:20:00.123Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@6a9344f5}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@3bf54172}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4da39ca9}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@6d0be7ab}, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@5584d9c6}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@6ef60295}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@1d4fb213}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@5f36c8e3}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@3c9c6245}, order = 2147483647]]
+2024-10-14T21:20:00.129540206Z 2024-10-14T21:20:00.129Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : Creating a new [proxy] client pool [PoolFactory{evictionInterval=PT0S, leasingStrategy=fifo, maxConnections=2147483647, maxIdleTime=-1, maxLifeTime=-1, metricsEnabled=false, pendingAcquireMaxCount=-1, pendingAcquireTimeout=0}] for [user-service/<unresolved>:8084]
+2024-10-14T21:20:00.129908503Z 2024-10-14T21:20:00.129Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [d9cbb22d] Created a new pooled channel, now: 0 active connections, 0 inactive connections and 0 pending acquire requests.
+2024-10-14T21:20:00.130180837Z 2024-10-14T21:20:00.130Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConfig        : [d9cbb22d] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T21:20:00.144622900Z 2024-10-14T21:20:00.144Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [d9cbb22d] Connecting to [user-service/172.18.0.7:8084].
+2024-10-14T21:20:00.145947283Z 2024-10-14T21:20:00.145Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] Registering pool release on close event for channel
+2024-10-14T21:20:00.146337782Z 2024-10-14T21:20:00.146Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [d9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] Channel connected, now: 1 active connections, 0 inactive connections and 0 pending acquire requests.
+2024-10-14T21:20:00.146483637Z 2024-10-14T21:20:00.146Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] onStateChange(PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084]}, [connected])
+2024-10-14T21:20:00.149529676Z 2024-10-14T21:20:00.148Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] onStateChange(GET{uri=null, connection=PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084]}}, [configured])
+2024-10-14T21:20:00.149685110Z 2024-10-14T21:20:00.149Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.http.client.HttpClientConnect    : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] Handler is being applied: {uri=http://user-service:8084/api/authenticate, method=POST}
+2024-10-14T21:20:00.150127035Z 2024-10-14T21:20:00.150Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084]}}, [request_prepared])
+2024-10-14T21:20:00.154734696Z 2024-10-14T21:20:00.154Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.channel.FluxReceive        : [0bc2892a-5, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [terminated=true, cancelled=false, pending=1, error=null]: subscribing inbound receiver
+2024-10-14T21:20:00.156006961Z 2024-10-14T21:20:00.155Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084]}}, [request_sent])
+2024-10-14T21:20:00.556866403Z 2024-10-14T21:20:00.556Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.client.HttpClientOperations     : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] Received response (auto-read:false) : RESPONSE(decodeResult: success, version: HTTP/1.1)
+2024-10-14T21:20:00.556911719Z HTTP/1.1 200 
+2024-10-14T21:20:00.556915406Z Vary: <filtered>
+2024-10-14T21:20:00.556918321Z Vary: <filtered>
+2024-10-14T21:20:00.556920575Z Vary: <filtered>
+2024-10-14T21:20:00.556922679Z X-Content-Type-Options: <filtered>
+2024-10-14T21:20:00.556924813Z X-XSS-Protection: <filtered>
+2024-10-14T21:20:00.556926797Z Cache-Control: <filtered>
+2024-10-14T21:20:00.556928831Z Pragma: <filtered>
+2024-10-14T21:20:00.556930855Z Expires: <filtered>
+2024-10-14T21:20:00.556932939Z X-Frame-Options: <filtered>
+2024-10-14T21:20:00.556934933Z Content-Type: <filtered>
+2024-10-14T21:20:00.556936956Z Transfer-Encoding: <filtered>
+2024-10-14T21:20:00.556938980Z Date: <filtered>
+2024-10-14T21:20:00.556941044Z 2024-10-14T21:20:00.556Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084]}}, [response_received])
+2024-10-14T21:20:00.559914475Z 2024-10-14T21:20:00.559Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.channel.FluxReceive        : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] [terminated=false, cancelled=false, pending=0, error=null]: subscribing inbound receiver
+2024-10-14T21:20:00.561513689Z 2024-10-14T21:20:00.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.client.HttpClientOperations     : [d9cbb22d-1, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] Received last HTTP packet
+2024-10-14T21:20:00.561652190Z 2024-10-14T21:20:00.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-5, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP response frame
+2024-10-14T21:20:00.561715089Z 2024-10-14T21:20:00.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-5, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Decreasing pending responses count: 0
+2024-10-14T21:20:00.561806692Z 2024-10-14T21:20:00.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-5, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:20:00.561867858Z 2024-10-14T21:20:00.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [0bc2892a-5, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:20:00.561959672Z 2024-10-14T21:20:00.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084]}}, [response_completed])
+2024-10-14T21:20:00.562000819Z 2024-10-14T21:20:00.561Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] onStateChange(POST{uri=/api/authenticate, connection=PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084]}}, [disconnecting])
+2024-10-14T21:20:00.562102432Z 2024-10-14T21:20:00.562Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] Releasing channel
+2024-10-14T21:20:00.563363846Z 2024-10-14T21:20:00.563Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [d9cbb22d, L:/172.18.0.3:37778 - R:user-service/172.18.0.7:8084] Channel cleaned, now: 0 active connections, 1 inactive connections and 0 pending acquire requests.
+2024-10-14T21:20:06.952343706Z 2024-10-14T21:20:06.951Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Increasing pending responses count: 1
+2024-10-14T21:20:06.952650696Z 2024-10-14T21:20:06.952Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [0bc2892a-6, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@1891067c
+2024-10-14T21:20:06.953498479Z 2024-10-14T21:20:06.953Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-6, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP response frame
+2024-10-14T21:20:06.953531211Z 2024-10-14T21:20:06.953Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-6, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Headers are not sent before onComplete().
+2024-10-14T21:20:06.954011559Z 2024-10-14T21:20:06.953Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-6, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Decreasing pending responses count: 0
+2024-10-14T21:20:06.954281699Z 2024-10-14T21:20:06.954Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-6, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:20:06.954336784Z 2024-10-14T21:20:06.954Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [0bc2892a-6, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:20:06.954434488Z 2024-10-14T21:20:06.954Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.channel.ChannelOperationsHandler     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] No ChannelOperation attached.
+2024-10-14T21:20:06.955592888Z 2024-10-14T21:20:06.955Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Increasing pending responses count: 1
+2024-10-14T21:20:06.955786264Z 2024-10-14T21:20:06.955Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.http.server.HttpServer     : [0bc2892a-7, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@1891067c
+2024-10-14T21:20:06.956587308Z 2024-10-14T21:20:06.956Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Route matched: secured-comments
+2024-10-14T21:20:06.956731831Z 2024-10-14T21:20:06.956Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : Mapping [Exchange: POST http://localhost:8082/api/comment] to Route{id='secured-comments', uri=http://comment-service:8081, order=0, predicate=Paths: [/api/comment], match trailing slash: true, gatewayFilters=[[com.forum.apigateway.JwtAuthGatewayFilter@1b8f85d2, order = 0]], metadata={}}
+2024-10-14T21:20:06.956776345Z 2024-10-14T21:20:06.956Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.h.RoutePredicateHandlerMapping   : [0bc2892a-7] Mapped to org.springframework.cloud.gateway.handler.FilteringWebHandler@2d470237
+2024-10-14T21:20:06.956927441Z 2024-10-14T21:20:06.956Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] o.s.c.g.handler.FilteringWebHandler      : Sorted gatewayFilterFactories: [[GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RemoveCachedBodyFilter@6a9344f5}, order = -2147483648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter@3bf54172}, order = -2147482648], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyWriteResponseFilter@4da39ca9}, order = -1], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardPathFilter@6d0be7ab}, order = 0], [com.forum.apigateway.JwtAuthGatewayFilter@1b8f85d2, order = 0], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.RouteToRequestUrlFilter@5584d9c6}, order = 10000], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.config.GatewayNoLoadBalancerClientAutoConfiguration$NoLoadBalancerClientFilter@6ef60295}, order = 10150], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.WebsocketRoutingFilter@1d4fb213}, order = 2147483646], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.NettyRoutingFilter@5f36c8e3}, order = 2147483647], [GatewayFilterAdapter{delegate=org.springframework.cloud.gateway.filter.ForwardRoutingFilter@3c9c6245}, order = 2147483647]]
+2024-10-14T21:20:06.959644097Z 2024-10-14T21:20:06.959Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.resources.PooledConnectionProvider   : [13766af6] Created a new pooled channel, now: 0 active connections, 0 inactive connections and 0 pending acquire requests.
+2024-10-14T21:20:06.959827724Z 2024-10-14T21:20:06.959Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConfig        : [13766af6] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.left.httpDecompressor = io.netty.handler.codec.http.HttpContentDecompressor), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2024-10-14T21:20:06.960258859Z 2024-10-14T21:20:06.960Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [13766af6] Connecting to [localhost/127.0.0.1:8084].
+2024-10-14T21:20:06.960750188Z 2024-10-14T21:20:06.960Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.transport.TransportConnector     : [13766af6] Connect attempt to [localhost/127.0.0.1:8084] failed.
+2024-10-14T21:20:06.960760438Z 
+2024-10-14T21:20:06.960764195Z io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:20:06.960768303Z Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+2024-10-14T21:20:06.960773472Z 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960779323Z 	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960785345Z 	at io.netty.channel.unix.Socket.finishConnect(Socket.java:359) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960790795Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:715) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960796295Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:692) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960845058Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960860447Z 	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960871107Z 	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960877529Z 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960883340Z 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960890053Z 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.960894241Z 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:20:06.960898188Z 
+2024-10-14T21:20:06.962850669Z 2024-10-14T21:20:06.961Z ERROR 1 --- [api-gateway] [or-http-epoll-3] a.w.r.e.AbstractErrorWebExceptionHandler : [0bc2892a-7]  500 Server Error for HTTP POST "/api/comment"
+2024-10-14T21:20:06.962858674Z 
+2024-10-14T21:20:06.962861389Z org.springframework.web.reactive.function.client.WebClientRequestException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:20:06.962870306Z 	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136) ~[spring-webflux-6.1.13.jar!/:6.1.13]
+2024-10-14T21:20:06.962872871Z 	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+2024-10-14T21:20:06.962875015Z Error has been observed at the following site(s):
+2024-10-14T21:20:06.962876979Z 	*__checkpoint ⇢ Request to POST http://localhost:8084/api/validate-token [DefaultWebClient]
+2024-10-14T21:20:06.962879363Z 	*__checkpoint ⇢ org.springframework.web.cors.reactive.CorsWebFilter [DefaultWebFilterChain]
+2024-10-14T21:20:06.962881708Z 	*__checkpoint ⇢ org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter [DefaultWebFilterChain]
+2024-10-14T21:20:06.962883792Z 	*__checkpoint ⇢ HTTP POST "/api/comment" [ExceptionHandlingWebHandler]
+2024-10-14T21:20:06.962886006Z Original Stack Trace:
+2024-10-14T21:20:06.962888030Z 		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136) ~[spring-webflux-6.1.13.jar!/:6.1.13]
+2024-10-14T21:20:06.962890494Z 		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962893059Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962895594Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962898189Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962900754Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962903299Z 		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962905703Z 		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962908719Z 		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962911133Z 		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962913458Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:229) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962915812Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:279) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962918167Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962920571Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:327) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962926462Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:212) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962928997Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962931392Z 		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962933726Z 		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:620) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962936111Z 		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:874) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962938425Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962940759Z 		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:337) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962943254Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962945799Z 		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1743) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962948153Z 		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:196) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962950488Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962952842Z 		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:311) ~[reactor-netty-http-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.962955217Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962957561Z 		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:172) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.962959946Z 		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962962360Z 		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:480) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.962964725Z 		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:436) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.962967149Z 		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962972389Z 		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:205) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962974864Z 		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:583) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.962977319Z 		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962979613Z 		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962981997Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962984652Z 		at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962987037Z 		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962989291Z 		at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962991565Z 		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.6.10.jar!/:3.6.10]
+2024-10-14T21:20:06.962993910Z 		at reactor.netty.transport.TransportConnector$MonoChannelPromise.tryFailure(TransportConnector.java:576) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.963091655Z 		at reactor.netty.transport.TransportConnector$MonoChannelPromise.setFailure(TransportConnector.java:522) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.963197495Z 		at reactor.netty.transport.TransportConnector.lambda$doConnect$7(TransportConnector.java:261) ~[reactor-netty-core-1.1.22.jar!/:1.1.22]
+2024-10-14T21:20:06.963226660Z 		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963240596Z 		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963286934Z 		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963315107Z 		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963368107Z 		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963395229Z 		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963417771Z 		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963442298Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.fulfillConnectPromise(AbstractEpollChannel.java:679) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963487583Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:698) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963504245Z 		at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963557585Z 		at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963606999Z 		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963634651Z 		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963678193Z 		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963711877Z 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963739219Z 		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:20:06.963764136Z Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: localhost/127.0.0.1:8084
+2024-10-14T21:20:06.963798832Z Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+2024-10-14T21:20:06.963830361Z 	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963866630Z 	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963898460Z 	at io.netty.channel.unix.Socket.finishConnect(Socket.java:359) ~[netty-transport-native-unix-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963931472Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:715) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963956850Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:692) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963974724Z 	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:567) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963980685Z 	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:491) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963986967Z 	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963996525Z 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.963999571Z 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.964002146Z 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.113.Final.jar!/:4.1.113.Final]
+2024-10-14T21:20:06.964004711Z 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2024-10-14T21:20:06.964007276Z 
+2024-10-14T21:20:06.964009931Z 2024-10-14T21:20:06.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-7, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP response frame
+2024-10-14T21:20:06.964012676Z 2024-10-14T21:20:06.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-7, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Headers are not sent before onComplete().
+2024-10-14T21:20:06.964015381Z 2024-10-14T21:20:06.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-7, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Decreasing pending responses count: 0
+2024-10-14T21:20:06.964018126Z 2024-10-14T21:20:06.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.http.server.HttpServerOperations     : [0bc2892a-7, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] Last HTTP packet was sent, terminating the channel
+2024-10-14T21:20:06.964021092Z 2024-10-14T21:20:06.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.netty.channel.ChannelOperations        : [0bc2892a-7, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [HttpServer] Channel inbound receiver cancelled (subscription disposed).
+2024-10-14T21:20:06.964070004Z 2024-10-14T21:20:06.963Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] reactor.netty.channel.FluxReceive        : [0bc2892a-7, L:/172.18.0.3:8082 - R:/172.18.0.1:58510] [terminated=true, cancelled=true, pending=0, error=null]: dropping frame LAST_CONTENT(decodeResult: success, content: PooledSlicedByteBuf(ridx: 0, widx: 33, cap: 33/33, unwrapped: PooledUnsafeDirectByteBuf(ridx: 512, widx: 512, cap: 512)))
+2024-10-14T21:21:00.612933801Z 2024-10-14T21:21:00.612Z DEBUG 1 --- [api-gateway] [or-http-epoll-3] r.n.r.DefaultPooledConnectionProvider    : [d9cbb22d, L:/172.18.0.3:37778 ! R:user-service/172.18.0.7:8084] onStateChange(PooledConnection{channel=[id: 0xd9cbb22d, L:/172.18.0.3:37778 ! R:user-service/172.18.0.7:8084]}, [disconnecting])
